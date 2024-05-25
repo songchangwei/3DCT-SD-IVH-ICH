@@ -1,4 +1,4 @@
 # 3DCT-SD-IVH-ICH
-A 3D CT dataset for segmentation of cerebral parenchymal hemorrhage and intraventricular hemorrhage
-
+HemSeg-200: A Voxel-Annotated Dataset for Intracerebral Hemorrhages Segmentation in Brain CT Scans
+paper: https://arxiv.org/pdf/2405.14559
 ***Data:*** 链接：https://pan.baidu.com/s/1b_GR3hE1rIr6HHKUAXqftA?pwd=q02q 
