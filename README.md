@@ -52,6 +52,12 @@ If you use this material, we would appreciate if you could cite the following re
 
     # 将图像写入NIfTI文件
     sitk.WriteImage(image, output_file)
+
+  # 示例使用
+  dicom_directory = 'path_to_dicom_directory'  # DICOM文件夹路径
+  output_file = 'output_file.nii.gz'  # 输出的NIfTI文件路径
+
+  convert_dicom_to_nifti(dicom_directory, output_file)
   ```
   Set `path_to_dicom_directory` as the folder path containing DICOM files, and set `output_file.nii.gz` as the path to the saved NIfTI file
 
