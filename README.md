@@ -72,3 +72,16 @@ Result: The performance of IPH and IVH segmentation on brain CT scans from RSNA 
 | UNETR[5]          | 55.98 [48.94, 62.69]     | 42.43 [36.10, 48.72]    | 111.10 [90.80, 131.54]   |
 | Swin UNETR[6]     | 48.50 [40.79, 56.13]     | 35.92 [29.19, 42.59]    | 164.85 [143.83, 186.99]  |
 | nnU-net[7]        | **78.99 [73.21, 83.86]** | **68.49 [62.05, 74.25]**| **22.16 [9.19, 38.20]**  |
+
+
+##References
+
+```text
+[1]Çiçek Ö, Abdulkadir A, Lienkamp S S, et al. 3D U-Net: learning dense volumetric segmentation from sparse annotation[C]//Medical Image Computing and Computer-Assisted Intervention–MICCAI 2016: 19th International Conference, Athens, Greece, October 17-21, 2016, Proceedings, Part II 19. Springer International Publishing, 2016: 424-432.
+[2]Milletari F, Navab N, Ahmadi S A. V-net: Fully convolutional neural networks for volumetric medical image segmentation[C]//2016 fourth international conference on 3D vision (3DV). Ieee, 2016: 565-571.
+[3]Myronenko A. 3D MRI brain tumor segmentation using autoencoder regularization[C]//Brainlesion: Glioma, Multiple Sclerosis, Stroke and Traumatic Brain Injuries: 4th International Workshop, BrainLes 2018, Held in Conjunction with MICCAI 2018, Granada, Spain, September 16, 2018, Revised Selected Papers, Part II 4. Springer International Publishing, 2019: 311-320.
+[4]Oktay O, Schlemper J, Folgoc L L, et al. Attention u-net: Learning where to look for the pancreas. arxiv 2018[J]. arxiv preprint arxiv:1804.03999, 1804.
+[5]Hatamizadeh A, Tang Y, Nath V, et al. Unetr: Transformers for 3d medical image segmentation[C]//Proceedings of the IEEE/CVF winter conference on applications of computer vision. 2022: 574-584.
+[6]Hatamizadeh A, Nath V, Tang Y, et al. Swin unetr: Swin transformers for semantic segmentation of brain tumors in mri images[C]//International MICCAI Brainlesion Workshop. Cham: Springer International Publishing, 2021: 272-284.
+[7]Isensee F, Jaeger P F, Kohl S A A, et al. nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation[J]. Nature methods, 2021, 18(2): 203-211.
+```
