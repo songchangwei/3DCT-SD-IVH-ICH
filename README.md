@@ -25,7 +25,7 @@ If you use this material, we would appreciate if you could cite the following re
 - The format is .nii.gz
 - image:
   
-  The original data comes from the [RSNA Cerebral Hemorrhage Challenge](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data), which includes image level annotations for cerebral hemorrhage types but does not provide pixel level annotations.
+  The original data comes from the [RSNA Intracranial Hemorrhage Detection Challenge](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data), which includes image level annotations for cerebral hemorrhage types but does not provide pixel level annotations.
 
   However, this dataset only provides 2D data of the Dicom type. We convert to 3D format data of type nii.gz through the following process.
 
