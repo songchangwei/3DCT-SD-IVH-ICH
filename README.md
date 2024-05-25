@@ -74,7 +74,7 @@ Result: The performance of IPH and IVH segmentation on brain CT scans from RSNA 
 | nnU-net[7]        | **78.99 [73.21, 83.86]** | **68.49 [62.05, 74.25]**| **22.16 [9.19, 38.20]**  |
 
 
-##References
+## References
 
 ```text
 [1]Çiçek Ö, Abdulkadir A, Lienkamp S S, et al. 3D U-Net: learning dense volumetric segmentation from sparse annotation[C]//Medical Image Computing and Computer-Assisted Intervention–MICCAI 2016: 19th International Conference, Athens, Greece, October 17-21, 2016, Proceedings, Part II 19. Springer International Publishing, 2016: 424-432.
