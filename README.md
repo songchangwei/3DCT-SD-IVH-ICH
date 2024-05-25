@@ -33,6 +33,34 @@ If you use this material, we would appreciate if you could cite the following re
 
   However, this dataset only provides 2D data of the Dicom type. We convert to 3D format data of type nii.gz through the following process.
 
+  ```bash
+  pip install SimpleITK
+  ```
+
+
+
+```python
+import SimpleITK as sitk
+import os
+
+def convert_dicom_to_nifti(dicom_directory, output_file):
+    # 读取DICOM系列
+    reader = sitk.ImageSeriesReader()
+    dicom_series = reader.GetGDCMSeriesFileNames(dicom_directory)
+    reader.SetFileNames(dicom_series)
+    image = reader.Execute()
+
+    # 将图像写入NIfTI文件
+    sitk.WriteImage(image, output_file)
+
+# 示例使用
+dicom_directory = 'path_to_dicom_directory'  # DICOM文件夹路径
+output_file = 'output_file.nii.gz'  # 输出的NIfTI文件路径
+
+convert_dicom_to_nifti(dicom_directory, output_file)
+```
+Set `path_to_dicom_directory` as the folder path containing DICOM files, and set `output_file.nii.gz` as the path to the saved NIfTI file
+
 - annotation:
   
   The segmentation labels of this dataset are labeled by us and can be obtained from the following link: https://pan.baidu.com/s/1b_GR3hE1rIr6HHKUAXqftA?pwd=q02q 
