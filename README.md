@@ -22,7 +22,7 @@ If you use this material, we would appreciate if you could cite the following re
 
 ## Datasets
 - The format is .nii.gz
-- image:
+- Image:
   
   The original data comes from the [RSNA Intracranial Hemorrhage Detection Challenge](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data), which includes image level annotations for cerebral hemorrhage types but does not provide pixel level annotations.
 
@@ -52,10 +52,23 @@ If you use this material, we would appreciate if you could cite the following re
   ```
   Set `path_to_dicom_directory` as the folder path containing DICOM files, and set `output_file.nii.gz` as the path to the saved NIfTI file
 
-- annotation:
+- Annotation:
   
   The segmentation labels of this dataset are labeled by us and can be obtained from the following link: https://pan.baidu.com/s/1b_GR3hE1rIr6HHKUAXqftA?pwd=q02q 
 
 
-## bashline
+## Baseline
 
+We evaluated seven commonly used 3D medical image segmentation models in the field, which can facilitate the understanding of the performance of these commonly used algorithms on this dataset.
+
+Result: The performance of IPH and IVH segmentation on brain CT scans from RSNA dataset. Results presented as mean with 95% bootstrap confidence interval computed on the independent test set.
+
+| Models         | Dice(%)                  | IoU(%)                  | HD95                     |
+|----------------|--------------------------|-------------------------|--------------------------|
+| U-net          | 63.70 [55.82, 71.10]     | 51.40 [44.26, 58.48]    | 83.48 [51.66, 88.37]     |
+| V-net          | 61.19 [52.81, 69.34]     | 49.39 [41.79, 56.98]    | 48.88 [33.30, 66.18]     |
+| SegResNet      | 32.66 [25.96, 39.74]     | 22.02 [16.99, 27.57]    | 141.16 [124.20, 158.99]  |
+| Attention U-net| 66.77 [58.90, 73.86]     | 54.98 [47.42, 62.10]    | 49.62 [33.44, 67.26]     |
+| UNETR          | 55.98 [48.94, 62.69]     | 42.43 [36.10, 48.72]    | 111.10 [90.80, 131.54]   |
+| Swin UNETR     | 48.50 [40.79, 56.13]     | 35.92 [29.19, 42.59]    | 164.85 [143.83, 186.99]  |
+| nnU-net        | **78.99 [73.21, 83.86]** | **68.49 [62.05, 74.25]**| **22.16 [9.19, 38.20]**  |
