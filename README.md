@@ -39,11 +39,11 @@ If you use this material, we would appreciate if you could cite the following re
 
 
 
-```python
-import SimpleITK as sitk
-import os
+  ```python
+  import SimpleITK as sitk
+  import os
 
-def convert_dicom_to_nifti(dicom_directory, output_file):
+  def convert_dicom_to_nifti(dicom_directory, output_file):
     # 读取DICOM系列
     reader = sitk.ImageSeriesReader()
     dicom_series = reader.GetGDCMSeriesFileNames(dicom_directory)
@@ -52,14 +52,8 @@ def convert_dicom_to_nifti(dicom_directory, output_file):
 
     # 将图像写入NIfTI文件
     sitk.WriteImage(image, output_file)
-
-# 示例使用
-dicom_directory = 'path_to_dicom_directory'  # DICOM文件夹路径
-output_file = 'output_file.nii.gz'  # 输出的NIfTI文件路径
-
-convert_dicom_to_nifti(dicom_directory, output_file)
-```
-Set `path_to_dicom_directory` as the folder path containing DICOM files, and set `output_file.nii.gz` as the path to the saved NIfTI file
+  ```
+  Set `path_to_dicom_directory` as the folder path containing DICOM files, and set `output_file.nii.gz` as the path to the saved NIfTI file
 
 - annotation:
   
