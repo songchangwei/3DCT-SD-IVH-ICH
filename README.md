@@ -8,5 +8,10 @@ It contains:
   ***2.*** The code and description of the baseline for this dataset
 
 If you use this material, we would appreciate if you could cite the following reference.
-## 描述
-这是一个用于脑出血和脑实质分割的3D数据集。
+## Citation
+@inproceedings{Song2024HemSeg200AV,
+  title={HemSeg-200: A Voxel-Annotated Dataset for Intracerebral Hemorrhages Segmentation in Brain CT Scans},
+  author={Changwei Song and Qing Zhao and Jianqiang Li and Xin Yue and Ruoyun Gao and Zhaoxuan Wang and An Gao and Guanghui Fu},
+  year={2024},
+  url={https://api.semanticscholar.org/CorpusID:269982589}
+}
