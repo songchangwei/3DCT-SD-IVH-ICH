@@ -31,7 +31,7 @@ If you use this material, we would appreciate if you could cite the following re
   ```bash
   pip install SimpleITK
   ```
-  
+
   ```python
   import SimpleITK as sitk
   import os
@@ -66,7 +66,7 @@ Result: The performance of IPH and IVH segmentation on brain CT scans from RSNA 
 | U-net[1]          | 63.70 [55.82, 71.10]     | 51.40 [44.26, 58.48]    | 83.48 [51.66, 88.37]     |
 | V-net[2]          | 61.19 [52.81, 69.34]     | 49.39 [41.79, 56.98]    | 48.88 [33.30, 66.18]     |
 | SegResNet[3]      | 32.66 [25.96, 39.74]     | 22.02 [16.99, 27.57]    | 141.16 [124.20, 158.99]  |
-| Attention U-net[4| 66.77 [58.90, 73.86]     | 54.98 [47.42, 62.10]    | 49.62 [33.44, 67.26]     |
+| Attention U-net[4]| 66.77 [58.90, 73.86]     | 54.98 [47.42, 62.10]    | 49.62 [33.44, 67.26]     |
 | UNETR[5]          | 55.98 [48.94, 62.69]     | 42.43 [36.10, 48.72]    | 111.10 [90.80, 131.54]   |
 | Swin UNETR[6]     | 48.50 [40.79, 56.13]     | 35.92 [29.19, 42.59]    | 164.85 [143.83, 186.99]  |
 | nnU-net[7]        | **78.99 [73.21, 83.86]** | **68.49 [62.05, 74.25]**| **22.16 [9.19, 38.20]**  |
