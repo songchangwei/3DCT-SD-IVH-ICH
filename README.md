@@ -1,5 +1,5 @@
 # HemSeg-200: A Voxel-Annotated Dataset for Intracerebral Hemorrhages Segmentation in Brain CT Scans
-This repository contains material associated to this  ***[paper](https://arxiv.org/pdf/2405.14559)*** 
+This repository contains material associated to this  ***[paper](https://arxiv.org/pdf/2405.14559)***
 
 
 It contains:
@@ -23,7 +23,7 @@ If you use this material, we would appreciate if you could cite the following re
 ## Datasets
 - The format is .nii.gz
 - Image:
-  
+
   The original data comes from the [RSNA Intracranial Hemorrhage Detection Challenge](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data), which includes image level annotations for cerebral hemorrhage types but does not provide pixel level annotations.
 
   However, this dataset only provides 2D data of the Dicom type. We convert to 3D format data of type nii.gz through the following process.
@@ -31,9 +31,7 @@ If you use this material, we would appreciate if you could cite the following re
   ```bash
   pip install SimpleITK
   ```
-
-
-
+  
   ```python
   import SimpleITK as sitk
   import os
@@ -46,15 +44,15 @@ If you use this material, we would appreciate if you could cite the following re
 
     sitk.WriteImage(image, output_file)
 
-  dicom_directory = 'path_to_dicom_directory'  
-  output_file = 'output_file.nii.gz'  
+  dicom_directory = 'path_to_dicom_directory'
+  output_file = 'output_file.nii.gz'
   convert_dicom_to_nifti(dicom_directory, output_file)
   ```
   Set `path_to_dicom_directory` as the folder path containing DICOM files, and set `output_file.nii.gz` as the path to the saved NIfTI file
 
 - Annotation:
-  
-  The segmentation labels of this dataset are labeled by us and can be obtained from the following link: https://pan.baidu.com/s/1b_GR3hE1rIr6HHKUAXqftA?pwd=q02q 
+
+  The segmentation labels of this dataset are labeled by us and can be obtained from the following link: https://pan.baidu.com/s/1b_GR3hE1rIr6HHKUAXqftA?pwd=q02q
 
 
 ## Baseline
