@@ -45,6 +45,7 @@ If you use this material, we would appreciate if you could cite the following re
   }
   ```
 ## Packages install
+Dependencies:
 ``` python3
 jsonlines==4.0.0
 pydicom==2.4.4
@@ -61,6 +62,7 @@ skimage==0.0
 torch==2.3.1
 torchio==0.19.5
 ```
+
 
 Install all dependencies listed in requirements.txt using the following command:
 ```bash
