@@ -49,27 +49,9 @@ If you use this material, we would appreciate if you could cite the following re
 
 The CT images are from the [RSNA Intracranial Hemorrhage Detection Challenge](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data). However, due to the copyright restrictions of this challenge, we cannot provide the DICOM or the converted NIFTI files directly. We encourage you to join and download the RSNA challenge dataset from the [Kaggle platform](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data). You can then use our code to select and convert the DICOM files into NIFTI files, which we have annotated. These files can be used for the hemorrhage segmentation task.
 
-```bash
-pip install SimpleITK
-```
-
-```python
-import SimpleITK as sitk
-import os
-
-def convert_dicom_to_nifti(dicom_directory, output_file):
-  reader = sitk.ImageSeriesReader()
-  dicom_series = reader.GetGDCMSeriesFileNames(dicom_directory)
-  reader.SetFileNames(dicom_series)
-  image = reader.Execute()
-
-  sitk.WriteImage(image, output_file)
-
-dicom_directory = 'path_to_dicom_directory'
-output_file = 'output_file.nii.gz'
-convert_dicom_to_nifti(dicom_directory, output_file)
-```
-Set `path_to_dicom_directory` as the folder path containing DICOM files, and set `output_file.nii.gz` as the path to the saved NIfTI file
+1. Download the original data from the [RSNA Intracranial Hemorrhage Detection Challenge](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data).
+2. The `annotion_file_info.jsonl` file details the patient-scan-slice correspondence. Organize all slices from the same scan (original DICOM data) into a single folder based on this file.
+3. Utilize `dcm2nii.py` to convert DICOM data to NIfTI format. This script processes a folder (representing a scan) and outputs a single NIfTI file.
 
 - Annotation:
 
