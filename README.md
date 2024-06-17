@@ -45,10 +45,9 @@ If you use this material, we would appreciate if you could cite the following re
   }
   ```
 ## Packages install
-The model we selected is implemented using the MONAI package [10]. Additionally, we require some supporting packages. Please install the following packages to re-implement our codes:
-
-``` python
-pip install monai numpy torch nibabel scikit-learn
+``` python3
+pip install monai
+pip install 
 ```
 ## Datasets
 ### Data selection and conversion
@@ -58,9 +57,7 @@ The CT images are from the [RSNA Intracranial Hemorrhage Detection Challenge](ht
 2. Download the [label files](https://pan.baidu.com/s/1b_GR3hE1rIr6HHKUAXqftA?pwd=q02q) that we annotated: https://pan.baidu.com/s/1b_GR3hE1rIr6HHKUAXqftA?pwd=q02q
 3. The [`annotion_file_info.jsonl`]() file that we selected to annotate. It contains two subtype of brain hemorrages: IPH and IVH. 
 4. Utilize [`select_dcm2nii.py`]() to select the selected DICOM file, and convert them into NIfTI format. 
-### Pre-precessing
-In our experiments, we performed the following pre-processing for the CT scans:
-1. 
+
 
 ## Baseline model implementations and evaluations
 The models we implemented are source from [MONAI package](https://monai.io/) [10]. We evaluated seven commonly used 3D medical image segmentation models in the field, which helps to understand the performance of these commonly used algorithms on this dataset. It contains: 
@@ -96,3 +93,4 @@ The performance of the experimental models can be seen in **Table 1**.
 8. Hatamizadeh A, Nath V, Tang Y, et al. Swin unetr: Swin transformers for semantic segmentation of brain tumors in mri images[C]//International MICCAI Brainlesion Workshop. Cham: Springer International Publishing, 2021: 272-284.
 9. Isensee F, Jaeger P F, Kohl S A A, et al. nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation[J]. Nature methods, 2021, 18(2): 203-211.
 10. Cardoso, M. Jorge, et al. "MONAI: An open-source framework for deep learning in healthcare." arXiv preprint arXiv:2211.02701 (2022).
+
