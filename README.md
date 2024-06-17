@@ -45,9 +45,10 @@ If you use this material, we would appreciate if you could cite the following re
   }
   ```
 ## Packages install
-``` python3
-pip install monai
-pip install 
+The model we selected is implemented using the MONAI package [10]. Additionally, we require some supporting packages. Please install the following packages to re-implement our codes:
+
+``` python
+pip install monai numpy torch nibabel scikit-learn
 ```
 ## Datasets
 ### Data selection and conversion
