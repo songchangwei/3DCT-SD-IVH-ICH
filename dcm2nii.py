@@ -5,6 +5,7 @@ import nibabel as nb
 import numpy as np
 import jsonlines,json
 import os,shutil
+import sys
 
 
 
@@ -25,8 +26,10 @@ def dcm2nii(filepath,target_filepath):
 
  
 if __name__ == '__main__':
-    filepath =  "path_to_input_dir"  #the downloaded raw files are stored in the specified path.
-    target_filepath = 'path_to_output_dir' #the NIfTI files are saved in the designated path.
+    filepath = sys.argv[1]
+    target_filepath = sys.argv[2]
+    #filepath =  "path_to_input_dir"  #the downloaded raw files are stored in the specified path.
+    #target_filepath = 'path_to_output_dir' #the NIfTI files are saved in the designated path.
     with jsonlines.open('annotion_file_info.jsonl','r') as reader:
         for item in jsonlines.Reader(reader):
             scan_name = item['scan']
