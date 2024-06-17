@@ -3,6 +3,8 @@ import os
 import sys,pydicom
 import nibabel as nb
 import numpy as np
+import jsonlines,json
+import os,shutil
 '''
 功能：读取filepath下的dcm文件
 返回值：读取得到的SimpleITK.SimpleITK.Image类   
@@ -33,22 +35,19 @@ def dcm2nii(filepath,target_filepath):
     os.system(r'C:\Users\Administrator\Desktop\MRIcroGL_windows\MRIcroGL\Resources\dcm2niix {0}'.format(filepath))
 
 
-def readfile(source_dir,target_dir):
-    lesion_names = ['label_1','label_2']
-    for lesion in lesion_names:
-        patient_names = os.listdir(source_dir+'/'+lesion)
-        for patient in patient_names:
-            scan_names = os.listdir(source_dir+'/'+lesion+'/'+patient)
-            for scan in scan_names:
-                source_file = source_dir+'/'+lesion+'/'+patient+'/'+scan
-                target_file = target_dir+'/'+lesion+'/'+patient+'/'+scan+'.nii.gz'
-                print(source_file,target_file)
-                if not os.path.exists(target_dir+'/'+lesion+'/'+patient):
-                    os.mkdir(target_dir+'/'+lesion+'/'+patient)
-                readdcm(source_file,target_file)
- 
  
 if __name__ == '__main__':
-    filepath =  "F:\\barin_chuxue_dcm"  #dcm文件保存路径
-    target_filepath = 'F:\\brain_chuxue_nii' #nii文件保存路径
-    readfile(filepath,target_filepath)
+    filepath =  "path_to_input_dir"  #the downloaded raw files are stored in the specified path.
+    target_filepath = 'path_to_output_dir' #the NIfTI files are saved in the designated path.
+    with jsonlines.open('annotion_file_info.jsonl','r') as reader:
+        for item in jsonlines.Reader(reader):
+            scan_name = item['scan']
+            slice_list = item['slice_list']
+            os.mkdir(scan_name) #创建临时文件
+            for slice in slice_list:
+                source_file = os.path.join(filepath,slice+'dcm')
+                target_file = os.path.join(scan_name,slice+'dcm')
+                shutil.copyfile(source_file,target_file)
+            readdcm(scan_name,os.path.join(target_filepath,scan_name+'.nii.gz'))
+
+            
