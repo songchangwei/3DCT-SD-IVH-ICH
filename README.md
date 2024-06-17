@@ -61,6 +61,11 @@ skimage==0.0
 torch==2.3.1
 torchio==0.19.5
 ```
+
+Install all dependencies listed in requirements.txt using the following command:
+```bash
+pip install -r requirements.txt
+```
 ## Datasets
 ### Data selection and conversion
 The CT images are from the [RSNA Intracranial Hemorrhage Detection Challenge](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data). However, due to the copyright restrictions of this challenge, we cannot provide the DICOM or the converted NIFTI files directly. We encourage you to join and download the RSNA challenge dataset from the [Kaggle platform](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data). You can then use our code to select and convert the DICOM files into NIFTI files, which we have annotated. These files can be used for the hemorrhage segmentation task that we proposed. It contains these following step:
