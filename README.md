@@ -73,7 +73,7 @@ The CT images are from the [RSNA Intracranial Hemorrhage Detection Challenge](ht
 The models we implemented are source from [MONAI package](https://monai.io/) [10]. We evaluated seven commonly used 3D medical image segmentation models in the field, which helps to understand the performance of these commonly used algorithms on this dataset. It contains: 
 * The codes related to model training can be found at: [`model_train`](https://github.com/songchangwei/3DCT-SD-IVH-ICH/tree/main/model_train) folder
 * The codes related to model inferencing can be found at: [`model_inference`](https://github.com/songchangwei/3DCT-SD-IVH-ICH/tree/main/model_inference) folder
-* The codes about model evaluation can be found at [`evaluation`]() folder.
+* The codes about model evaluation can be found at [`evaluation`](https://github.com/songchangwei/3DCT-SD-IVH-ICH/tree/main/evaluation) folder.
     * ``evaluation/eval_bootstrap_ci.py``: This code is for evaluation and calculate the 95% bootstrap confidence interval.
 
 The performance of the experimental models can be seen in **Table 1**.  
