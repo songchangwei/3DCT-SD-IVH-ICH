@@ -5,8 +5,8 @@ This repository contains material associated to this  ***[paper](https://arxiv.o
 It contains:
 
   - Link to the dataset: [CT images](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data) from RSNA challenge [2] and [label file](https://pan.baidu.com/s/1b_GR3hE1rIr6HHKUAXqftA?pwd=q02q) that we annotated.
-  - The code to select and cover DICOM file to NIFTI file that we annotated.
-  - The code for the baseline models that we implemented.
+  - The [code](#Data-selection-and-conversion) to select and cover DICOM file to NIFTI file that we annotated.
+  - The [code](#Baseline-model-implementations) for the baseline models that we implemented.
 
 If you use this material, we would appreciate if you could cite the following reference.
 ## Citation
@@ -44,23 +44,29 @@ If you use this material, we would appreciate if you could cite the following re
       url = {https://kaggle.com/competitions/rsna-intracranial-hemorrhage-detection}
   }
   ```
-
+## Packages install
+``` python3
+pip install monai
+pip install 
+```
 ## Datasets
+### Data selection and conversion
+The CT images are from the [RSNA Intracranial Hemorrhage Detection Challenge](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data). However, due to the copyright restrictions of this challenge, we cannot provide the DICOM or the converted NIFTI files directly. We encourage you to join and download the RSNA challenge dataset from the [Kaggle platform](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data). You can then use our code to select and convert the DICOM files into NIFTI files, which we have annotated. These files can be used for the hemorrhage segmentation task that we proposed. It contains these following step:
 
-The CT images are from the [RSNA Intracranial Hemorrhage Detection Challenge](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data). However, due to the copyright restrictions of this challenge, we cannot provide the DICOM or the converted NIFTI files directly. We encourage you to join and download the RSNA challenge dataset from the [Kaggle platform](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data). You can then use our code to select and convert the DICOM files into NIFTI files, which we have annotated. These files can be used for the hemorrhage segmentation task.
-
-1. Download the original data from the [RSNA Intracranial Hemorrhage Detection Challenge](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data).
-2. The `annotion_file_info.jsonl` file details the patient-scan-slice correspondence. Organize all slices from the same scan (original DICOM data) into a single folder based on this file.
-3. Utilize `dcm2nii.py` to convert DICOM data to NIfTI format. This script processes a folder (representing a scan) and outputs a single NIfTI file.
-
-- Annotation:
-
-  The segmentation labels of this dataset are labeled by us and can be obtained from the following link: https://pan.baidu.com/s/1b_GR3hE1rIr6HHKUAXqftA?pwd=q02q
+1. Download the original CT images from the [RSNA Intracranial Hemorrhage Detection Challenge](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data): https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data.
+2. Download the [label files](https://pan.baidu.com/s/1b_GR3hE1rIr6HHKUAXqftA?pwd=q02q) that we annotated: https://pan.baidu.com/s/1b_GR3hE1rIr6HHKUAXqftA?pwd=q02q
+3. The [`annotion_file_info.jsonl`]() file that we selected to annotate. It contains two subtype of brain hemorrages: IPH and IVH. 
+4. Utilize [`select_dcm2nii.py`]() to select the selected DICOM file, and convert them into NIfTI format. 
 
 
-## Baseline
+## Baseline model implementations and evaluations
+The models we implemented are source from [MONAI package](https://monai.io/) [10]. We evaluated seven commonly used 3D medical image segmentation models in the field, which helps to understand the performance of these commonly used algorithms on this dataset. It contains: 
+* The codes related to model training can be found at: [`model_train`]() folder
+* The codes related to model inferencing can be found at: [`model_inference`]() folder
+* The codes about model evaluation can be found at [`evaluation`]() folder.
+    * ``evaluation/eval_bootstrap_ci.py``: This code is for evaluation and calculate the 95% bootstrap confidence interval.
 
-We evaluated seven commonly used 3D medical image segmentation models in the field, which helps to understand the performance of these commonly used algorithms on this dataset.
+The performance of the experimental models can be seen in **Table 1**.  
 
 **Table 1:** The performance of IPH and IVH segmentation on brain CT scans from RSNA dataset. Results presented as mean with 95% bootstrap confidence interval computed on the independent test set.
 
@@ -86,3 +92,4 @@ We evaluated seven commonly used 3D medical image segmentation models in the fie
 7. Hatamizadeh A, Tang Y, Nath V, et al. Unetr: Transformers for 3d medical image segmentation[C]//Proceedings of the IEEE/CVF winter conference on applications of computer vision. 2022: 574-584.
 8. Hatamizadeh A, Nath V, Tang Y, et al. Swin unetr: Swin transformers for semantic segmentation of brain tumors in mri images[C]//International MICCAI Brainlesion Workshop. Cham: Springer International Publishing, 2021: 272-284.
 9. Isensee F, Jaeger P F, Kohl S A A, et al. nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation[J]. Nature methods, 2021, 18(2): 203-211.
+10. Cardoso, M. Jorge, et al. "MONAI: An open-source framework for deep learning in healthcare." arXiv preprint arXiv:2211.02701 (2022).
