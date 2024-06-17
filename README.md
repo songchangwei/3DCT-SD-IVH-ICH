@@ -60,7 +60,7 @@ The CT images are from the [RSNA Intracranial Hemorrhage Detection Challenge](ht
 1. Download the original CT images from the [RSNA Intracranial Hemorrhage Detection Challenge](https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data): https://www.kaggle.com/competitions/rsna-intracranial-hemorrhage-detection/data.
 2. Download the [label files](https://pan.baidu.com/s/1b_GR3hE1rIr6HHKUAXqftA?pwd=q02q) that we annotated: https://pan.baidu.com/s/1b_GR3hE1rIr6HHKUAXqftA?pwd=q02q
 3. The [`annotion_file_info.jsonl`]() file that we selected to annotate. It contains two subtype of brain hemorrages: IPH and IVH. 
-4. Utilize [`select_dcm2nii.py`]() to select the selected DICOM file, and convert them into NIfTI format. 
+4. Utilize [`dcm2nii.py`]() to select the selected DICOM file, and convert them into NIfTI format. 
 
 
 ## Baseline model implementations and evaluations
