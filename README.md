@@ -90,6 +90,7 @@ The models we implemented are source from [MONAI package](https://monai.io/) [10
 * The codes related to model inferencing can be found at: [`model_inference`](https://github.com/songchangwei/3DCT-SD-IVH-ICH/tree/main/model_inference) folder
 * The codes about model evaluation can be found at [`evaluation`](https://github.com/songchangwei/3DCT-SD-IVH-ICH/tree/main/evaluation) folder.
     * ``evaluation/eval_bootstrap_ci.py``: This code is for evaluation and calculate the 95% bootstrap confidence interval.
+* Training and inference for nnUNet are detailed in the [`official code repository`](https://github.com/MIC-DKFZ/nnUNet).
 
 The performance of the experimental models can be seen in **Table 1**.  
 
