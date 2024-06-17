@@ -46,8 +46,12 @@ If you use this material, we would appreciate if you could cite the following re
   ```
 ## Packages install
 ``` python3
-pip install monai
-pip install 
+jsonlines==4.0.0
+nibabel==5.2.1
+numpy==2.0.0
+pandas==2.0.3
+pydicom==2.4.4
+SimpleITK==2.3.1
 ```
 ## Datasets
 ### Data selection and conversion
