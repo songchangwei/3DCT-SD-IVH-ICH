@@ -46,7 +46,7 @@ If you use this material, we would appreciate if you could cite the following re
   ```
 
 ## Contact
-If you have any questions about the dataset or code, please contact us at 'songchangwei@emails.bjut.edu.cn' or 'songchangwei1996@outlook.com'. We are more than happy to assist you.
+If you have any questions about the dataset or code, please contact us at songchangwei@emails.bjut.edu.cn or songchangwei1996@outlook.com. We are more than happy to assist you.
   
 ## Packages install
 Dependencies:
