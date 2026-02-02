@@ -1,6 +1,7 @@
 # HemSeg-200: A Voxel-Annotated Dataset for Intracerebral Hemorrhages Segmentation in Brain CT Scans  & HemSeg-500: A Voxel-Annotated Dataset for Intracerebral Hemorrhages Segmentation in Brain CT Scans
 This repository contains material associated to this  ***[paper](https://arxiv.org/pdf/2405.14559)***
 
+## Update! We have recently added HemSeg-500, which has been expanded to 525 scans (316 cases of Intracerebral Hemorrhage [IPH], 209 cases of Intraventricular Hemorrhage [IVH]).
 
 It contains:
 
