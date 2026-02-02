@@ -1,4 +1,4 @@
-# HemSeg-200: A Voxel-Annotated Dataset for Intracerebral Hemorrhages Segmentation in Brain CT Scans
+# HemSeg-200: A Voxel-Annotated Dataset for Intracerebral Hemorrhages Segmentation in Brain CT Scans  & HemSeg-500: A Voxel-Annotated Dataset for Intracerebral Hemorrhages Segmentation in Brain CT Scans
 This repository contains material associated to this  ***[paper](https://arxiv.org/pdf/2405.14559)***
 
 
